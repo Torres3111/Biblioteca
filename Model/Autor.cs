@@ -17,7 +17,7 @@ namespace AulaAEDB01.Windows.Model
         public string NomeA { get { return _NomeA; } set { _NomeA = value.Replace("'", ""); } }
 
             public static List<Autor> ListarTodos()
-            {
+        {
                 using (var oCn = DataHelper.Conexao())
                 {
                     List<Autor> Retorno = new List<Autor>();

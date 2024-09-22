@@ -40,7 +40,7 @@ namespace AulaAEDB01.Windows.Model
 
             }
         }
-        
+
         public Tipo? Seleciona(int CodigoU)
         {
             using (var oCn = DataHelper.Conexao())
@@ -61,11 +61,11 @@ namespace AulaAEDB01.Windows.Model
                 return Retornar;
             }
         }
-       
 
 
-        
 
-            }
-        
+
+
+    }
+
 }
