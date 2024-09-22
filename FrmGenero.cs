@@ -185,15 +185,5 @@ namespace AulaAEDB01.Windows
         {
 
         }
-
-        private void TxtNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblNome_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

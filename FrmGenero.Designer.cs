@@ -47,44 +47,40 @@
             // TxtCodigo
             // 
             TxtCodigo.Enabled = false;
-            TxtCodigo.Location = new Point(31, 40);
-            TxtCodigo.Margin = new Padding(3, 2, 3, 2);
+            TxtCodigo.Location = new Point(35, 54);
             TxtCodigo.MaxLength = 4;
             TxtCodigo.Name = "TxtCodigo";
-            TxtCodigo.Size = new Size(110, 23);
+            TxtCodigo.Size = new Size(125, 27);
             TxtCodigo.TabIndex = 0;
             toolTip1.SetToolTip(TxtCodigo, "Código númerico do Gênero");
             TxtCodigo.TextChanged += TxtCodigo_TextChanged;
             // 
             // TxtNome
             // 
-            TxtNome.Location = new Point(154, 40);
-            TxtNome.Margin = new Padding(3, 2, 3, 2);
+            TxtNome.Location = new Point(176, 54);
             TxtNome.MaxLength = 50;
             TxtNome.Name = "TxtNome";
-            TxtNome.Size = new Size(400, 23);
+            TxtNome.Size = new Size(456, 27);
             TxtNome.TabIndex = 1;
             toolTip1.SetToolTip(TxtNome, "Nome do Gênero");
-            TxtNome.TextChanged += TxtNome_TextChanged;
             // 
             // LblCodigo
             // 
             LblCodigo.AutoSize = true;
-            LblCodigo.Location = new Point(31, 14);
+            LblCodigo.Location = new Point(35, 18);
             LblCodigo.Name = "LblCodigo";
-            LblCodigo.Size = new Size(46, 15);
+            LblCodigo.Size = new Size(58, 20);
             LblCodigo.TabIndex = 2;
             LblCodigo.Text = "Código";
             // 
             // LblNome
             // 
             LblNome.AutoSize = true;
-            LblNome.Location = new Point(154, 14);
+            LblNome.Location = new Point(176, 18);
             LblNome.Name = "LblNome";
-            LblNome.Size = new Size(40, 15);
+            LblNome.Size = new Size(50, 20);
             LblNome.TabIndex = 3;
             LblNome.Text = "Nome";
-            LblNome.Click += LblNome_Click;
             // 
             // toolTip1
             // 
@@ -92,10 +88,9 @@
             // 
             // BtnSalvar
             // 
-            BtnSalvar.Location = new Point(31, 79);
-            BtnSalvar.Margin = new Padding(3, 2, 3, 2);
+            BtnSalvar.Location = new Point(35, 105);
             BtnSalvar.Name = "BtnSalvar";
-            BtnSalvar.Size = new Size(136, 26);
+            BtnSalvar.Size = new Size(156, 34);
             BtnSalvar.TabIndex = 4;
             BtnSalvar.Text = "&Salvar";
             BtnSalvar.UseVisualStyleBackColor = true;
@@ -103,10 +98,9 @@
             // 
             // BtnFechar
             // 
-            BtnFechar.Location = new Point(198, 79);
-            BtnFechar.Margin = new Padding(3, 2, 3, 2);
+            BtnFechar.Location = new Point(226, 105);
             BtnFechar.Name = "BtnFechar";
-            BtnFechar.Size = new Size(136, 26);
+            BtnFechar.Size = new Size(156, 34);
             BtnFechar.TabIndex = 5;
             BtnFechar.Text = "&Fechar";
             BtnFechar.UseVisualStyleBackColor = true;
@@ -119,11 +113,10 @@
             GrdItens.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             GrdItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GrdItens.Columns.AddRange(new DataGridViewColumn[] { Código, Nome, BtnAlterar, BtnExcluir });
-            GrdItens.Location = new Point(2, 117);
-            GrdItens.Margin = new Padding(3, 2, 3, 2);
+            GrdItens.Location = new Point(2, 156);
             GrdItens.Name = "GrdItens";
             GrdItens.RowHeadersWidth = 51;
-            GrdItens.Size = new Size(695, 200);
+            GrdItens.Size = new Size(794, 266);
             GrdItens.TabIndex = 6;
             GrdItens.CellClick += GrdItens_CellClick;
             GrdItens.CellContentClick += dataGridView1_CellContentClick_1;
@@ -161,9 +154,9 @@
             // FrmGenero
             // 
             AcceptButton = BtnSalvar;
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 321);
+            ClientSize = new Size(800, 428);
             Controls.Add(GrdItens);
             Controls.Add(BtnFechar);
             Controls.Add(BtnSalvar);
@@ -171,7 +164,6 @@
             Controls.Add(LblCodigo);
             Controls.Add(TxtNome);
             Controls.Add(TxtCodigo);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmGenero";
             Text = "Cadastro de Genero";
             Activated += FrmGenero_Activated;

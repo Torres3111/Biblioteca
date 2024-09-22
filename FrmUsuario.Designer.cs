@@ -33,9 +33,9 @@
             GrdItensU = new DataGridView();
             CodigoU = new DataGridViewTextBoxColumn();
             NomeU = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            Tipo = new DataGridViewTextBoxColumn();
-            Senha = new DataGridViewTextBoxColumn();
+            SenhaU = new DataGridViewTextBoxColumn();
+            EmailU = new DataGridViewTextBoxColumn();
+            TipoU = new DataGridViewTextBoxColumn();
             BtnAlterarU = new DataGridViewButtonColumn();
             BtnExcluirU = new DataGridViewButtonColumn();
             BtnFecharU = new Button();
@@ -76,14 +76,15 @@
             GrdItensU.AllowUserToDeleteRows = false;
             GrdItensU.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             GrdItensU.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            GrdItensU.Columns.AddRange(new DataGridViewColumn[] { CodigoU, NomeU, Email, Tipo, Senha, BtnAlterarU, BtnExcluirU });
+            GrdItensU.Columns.AddRange(new DataGridViewColumn[] { CodigoU, NomeU, SenhaU, EmailU, TipoU, BtnAlterarU, BtnExcluirU });
             GrdItensU.Location = new Point(3, 164);
             GrdItensU.Margin = new Padding(3, 2, 3, 2);
             GrdItensU.Name = "GrdItensU";
             GrdItensU.RowHeadersWidth = 51;
             GrdItensU.Size = new Size(816, 196);
             GrdItensU.TabIndex = 23;
-            GrdItensU.CellContentClick += GrdItensU_CellClick;
+            GrdItensU.CellClick += GrdItensU_CellClick;
+            GrdItensU.CellContentClick += GrdItensU_CellContentClick;
             // 
             // CodigoU
             // 
@@ -101,29 +102,29 @@
             NomeU.Name = "NomeU";
             NomeU.Width = 125;
             // 
-            // Email
+            // SenhaU
             // 
-            Email.DataPropertyName = "EmailU";
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
-            Email.Width = 125;
+            SenhaU.DataPropertyName = "SenhaU";
+            SenhaU.HeaderText = "Senha";
+            SenhaU.MinimumWidth = 6;
+            SenhaU.Name = "SenhaU";
+            SenhaU.Width = 125;
             // 
-            // Tipo
+            // EmailU
             // 
-            Tipo.DataPropertyName = "TipoU";
-            Tipo.HeaderText = "Tipo";
-            Tipo.MinimumWidth = 6;
-            Tipo.Name = "Tipo";
-            Tipo.Width = 125;
+            EmailU.DataPropertyName = "EmailU";
+            EmailU.HeaderText = "Email";
+            EmailU.MinimumWidth = 6;
+            EmailU.Name = "EmailU";
+            EmailU.Width = 125;
             // 
-            // Senha
+            // TipoU
             // 
-            Senha.DataPropertyName = "SenhaU";
-            Senha.HeaderText = "Senha";
-            Senha.MinimumWidth = 6;
-            Senha.Name = "Senha";
-            Senha.Width = 125;
+            TipoU.DataPropertyName = "TipoU";
+            TipoU.HeaderText = "Tipo";
+            TipoU.MinimumWidth = 6;
+            TipoU.Name = "TipoU";
+            TipoU.Width = 125;
             // 
             // BtnAlterarU
             // 
@@ -150,7 +151,6 @@
             BtnFecharU.TabIndex = 22;
             BtnFecharU.Text = "&Fechar";
             BtnFecharU.UseVisualStyleBackColor = true;
-            BtnFecharU.Click += BtnFecharU_Click;
             // 
             // BtnSalvarU
             // 
@@ -266,23 +266,23 @@
 
         #endregion
         private Label LblCodigoI;
+        private TextBox TxtCodigoU;
         private DataGridView GrdItensU;
         private Button BtnFecharU;
         private Button BtnSalvarU;
+        private ComboBox CboTipo;
         private Label label1;
         private Label LblNomeI;
+        private TextBox TxtNomeU;
         private Label label2;
+        private TextBox TxtEmail;
         private Label label3;
-        public ComboBox CboTipo;
-        public TextBox TxtCodigoU;
-        public TextBox TxtNomeU;
-        public TextBox TxtEmail;
-        public TextBox TxtSenha;
+        private TextBox TxtSenha;
         private DataGridViewTextBoxColumn CodigoU;
         private DataGridViewTextBoxColumn NomeU;
-        private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn Tipo;
-        private DataGridViewTextBoxColumn Senha;
+        private DataGridViewTextBoxColumn SenhaU;
+        private DataGridViewTextBoxColumn EmailU;
+        private DataGridViewTextBoxColumn TipoU;
         private DataGridViewButtonColumn BtnAlterarU;
         private DataGridViewButtonColumn BtnExcluirU;
     }
