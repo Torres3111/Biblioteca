@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Drawing;
+using Microsoft.VisualBasic.Logging;
 namespace AulaAEDB01.Windows.Helper
 {
     public static class DataHelper
@@ -22,12 +23,15 @@ namespace AulaAEDB01.Windows.Helper
 
        public static List<Usuario> ListaUsuario { get; set; }
 
-       public static List<Livro> ListaLivro { get; set; }   
+       public static List<Livro> ListaLivro { get; set; }
 
-        public static List<LogIn> ListaLogin {  get; set; }
+       public static List<Tipo> ListaTipo { get; set; }
+    
+       public static List<AutorLivro> ListaAutorLivro { get; set; }
+
         public static SqlConnection Conexao()
         {
-            string strconnection = "Data Source=DESKTOP-G83281E\\SQLEXPRESS;Initial Catalog=biblioteca;Integrated Security=True;Connect Timeout=30;TrustServerCertificate=True"; 
+            string strconnection = "Data Source=.\\SQLEXPRESS;Initial Catalog=biblioteca;Integrated Security=True;Connect Timeout=30;TrustServerCertificate=True;"; 
             SqlConnection oCn = new SqlConnection(strconnection);
             oCn.Open();
             return oCn;

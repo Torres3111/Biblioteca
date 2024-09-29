@@ -88,13 +88,17 @@ namespace AulaAEDB01.Windows.Model
         }
         public void Excluir()
         {
-            using (var oCn = DataHelper.Conexao())
-            {
-                string SQL = $"Delete from Autor where id={this.CodigoA}";
-                SqlCommand comando = new SqlCommand(SQL, oCn);
-                comando.ExecuteNonQuery();
-            }
+            
+                using (var oCn = DataHelper.Conexao())
+                {
+                    string SQL = $"Delete from Autor where id={this.CodigoA}";
+                    SqlCommand comando = new SqlCommand(SQL, oCn);
+                    comando.ExecuteNonQuery();
+                }
+            
+            
         }
+
 
     }
 }

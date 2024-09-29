@@ -31,7 +31,7 @@ namespace AulaAEDB01.Windows.Model
         public string SenhaL { get { return _SenhaL; } set { _SenhaL = value.Replace("'", ""); } }
         public string User { get { return _User; } set { _User = value.Replace("'", ""); } }
         public string TipoL { get { return _TipoL; } set { _TipoL = value.Replace("'", ""); } }
-        public static Usuario? UsuarioLogado {get; set;}
+        public static Usuario? UsuarioLogado { get; set; }
 
 
         public static List<Usuario> ListarTodos()
@@ -146,7 +146,7 @@ namespace AulaAEDB01.Windows.Model
         }
 
         public static Usuario? MetodoL(string User)
-         {
+        {
             using (var oCn = DataHelper.Conexao())
             {
                 Usuario? Retorno = null;
@@ -158,16 +158,16 @@ namespace AulaAEDB01.Windows.Model
                 {
                     Retorno = new Usuario
                     {
-                       
+
                         NomeU = oDr.GetString(oDr.GetOrdinal("Nome")),
                         SenhaL = oDr.GetString(oDr.GetOrdinal("Senha")),
                         TipoL = oDr.GetString(oDr.GetOrdinal("Tipo")),
-                        
+
                     };
                 }
                 oDr.Close();
                 return Retorno;
-                
+
 
 
             }
