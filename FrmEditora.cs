@@ -1,4 +1,5 @@
 ﻿using AulaAEDB01.Windows.Model;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -120,7 +121,7 @@ namespace AulaAEDB01.Windows
             }
         }
 
-        private void GrdItens_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void GrdItensE_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (GrdItensE.Rows[e.RowIndex].DataBoundItem != null)
             {
@@ -128,7 +129,7 @@ namespace AulaAEDB01.Windows
                 Editora objSelecionado = (Editora)GrdItensE.Rows[e.RowIndex].DataBoundItem;
 
                 // VERIFICA SE CLICOU NO BOTÃO ALTERAR OU EXCLUIR.
-                if (GrdItensE.Columns[e.ColumnIndex].Name == "BtnAlterar")
+                if (GrdItensE.Columns[e.ColumnIndex].Name == "BtnAlterarE")
                 {
                     // Clicou no botão alterar.
                     TxtCodigoE.Text = objSelecionado.CodigoE.ToString();
@@ -137,13 +138,22 @@ namespace AulaAEDB01.Windows
                     TxtNomeE.Focus();
                     Incluir = false;
                 }
-                else if (GrdItensE.Columns[e.ColumnIndex].Name == "BtnExcluir")
+                else if (GrdItensE.Columns[e.ColumnIndex].Name == "BtnExcluirE")
                 {
                     // Clicou no botão excluir.
                     if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        objSelecionado.Excluir();
-                        CarregaGrid();
+                        try
+                        {
+                            objSelecionado.Excluir();
+                            CarregaGrid();
+                        }
+                        catch (SqlException ex)
+                        {
+
+                            MessageBox.Show($"Não é possível excluir a editora porque ele já tem um livro cadastrado. ", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
                     }
                 }
             }

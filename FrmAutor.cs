@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AulaAEDB01.Windows.Model;
+using Microsoft.Data.SqlClient;
 
 namespace AulaAEDB01.Windows
 {
@@ -166,8 +167,17 @@ namespace AulaAEDB01.Windows
                     //Clicou no botão excluir.
                     if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        objSelecionadoA.Excluir();
-                        CarregaGrid();
+                        try
+                        {
+                            objSelecionadoA.Excluir();
+                            CarregaGrid();
+                        }
+                        catch (SqlException ex)
+                        {
+                            
+                             MessageBox.Show($"Não é possível excluir o autor porque ele já tem um livro cadastrado em seu nome. ", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                          
+                        }      
                     }
                 }
             }

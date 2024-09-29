@@ -14,7 +14,7 @@ namespace AulaAEDB01.Windows
 {
     public partial class FrmLogIn : Form
     {
-        
+
         public FrmLogIn()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace AulaAEDB01.Windows
         }
         private void Checar()
         {
-            
+
 
             string usuario = TxtUser.Text;
             string senha = TxtSenha.Text;
@@ -34,29 +34,31 @@ namespace AulaAEDB01.Windows
 
             if (usuarioEncontrado != null && usuarioEncontrado.SenhaL == senha)
             {
-                Usuario.UsuarioLogado = Usuario.MetodoL(usuario);         
+                Usuario.UsuarioLogado = Usuario.MetodoL(usuario);
                 this.Visible = false;
                 FrmMenu menu = new FrmMenu();
                 menu.Show();
             }
-            
+
             else
             {
                 MessageBox.Show("Usuário ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            
-
 
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Checar();  
+            Checar();
         }
 
         private void TxtSenha_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void FrmLogIn_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           // System.Windows.Forms.Application.Exit();
+         
         }
     }
 }

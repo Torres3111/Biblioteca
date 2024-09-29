@@ -1,4 +1,7 @@
-﻿namespace AulaAEDB01.Windows
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
+
+namespace AulaAEDB01.Windows
 {
     partial class FrmLogIn
     {
@@ -39,53 +42,56 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(48, 25);
+            label1.Font = new System.Drawing.Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(55, 33);
             label1.Name = "label1";
-            label1.Size = new Size(174, 21);
+            label1.Size = new Size(216, 28);
             label1.TabIndex = 0;
             label1.Text = "Sistema de Biblioteca";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(38, 86);
+            label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(43, 115);
             label2.Name = "label2";
-            label2.Size = new Size(35, 17);
+            label2.Size = new Size(45, 23);
             label2.TabIndex = 1;
             label2.Text = "User";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(38, 177);
+            label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(43, 236);
             label3.Name = "label3";
-            label3.Size = new Size(45, 17);
+            label3.Size = new Size(58, 23);
             label3.TabIndex = 2;
             label3.Text = "Senha";
             // 
             // TxtUser
             // 
-            TxtUser.Location = new Point(38, 106);
+            TxtUser.Location = new Point(43, 141);
+            TxtUser.Margin = new Padding(3, 4, 3, 4);
             TxtUser.Name = "TxtUser";
-            TxtUser.Size = new Size(195, 23);
+            TxtUser.Size = new Size(222, 27);
             TxtUser.TabIndex = 3;
             // 
             // TxtSenha
             // 
-            TxtSenha.Location = new Point(38, 197);
+            TxtSenha.Location = new Point(43, 263);
+            TxtSenha.Margin = new Padding(3, 4, 3, 4);
             TxtSenha.Name = "TxtSenha";
-            TxtSenha.Size = new Size(195, 23);
+            TxtSenha.Size = new Size(222, 27);
             TxtSenha.TabIndex = 4;
             TxtSenha.TextChanged += TxtSenha_TextChanged;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(84, 259);
+            btnLogin.Location = new Point(96, 345);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(84, 32);
+            btnLogin.Size = new Size(96, 43);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Log-In";
             btnLogin.UseVisualStyleBackColor = true;
@@ -93,19 +99,21 @@
             // 
             // FrmLogIn
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(269, 319);
+            ClientSize = new Size(307, 425);
             Controls.Add(btnLogin);
             Controls.Add(TxtSenha);
             Controls.Add(TxtUser);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "FrmLogIn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmLogIn";
+            FormClosed += FrmLogIn_FormClosed;
             Load += FrmLogIn_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -1,5 +1,3 @@
-
-
 namespace AulaAEDB01.Windows
 {
     internal static class Program

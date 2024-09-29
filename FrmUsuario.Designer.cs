@@ -54,20 +54,19 @@
             // LblCodigoI
             // 
             LblCodigoI.AutoSize = true;
-            LblCodigoI.Location = new Point(32, 17);
+            LblCodigoI.Location = new Point(36, 23);
             LblCodigoI.Name = "LblCodigoI";
-            LblCodigoI.Size = new Size(46, 15);
+            LblCodigoI.Size = new Size(58, 20);
             LblCodigoI.TabIndex = 26;
             LblCodigoI.Text = "Código";
             // 
             // TxtCodigoU
             // 
             TxtCodigoU.Enabled = false;
-            TxtCodigoU.Location = new Point(32, 44);
-            TxtCodigoU.Margin = new Padding(3, 2, 3, 2);
+            TxtCodigoU.Location = new Point(36, 59);
             TxtCodigoU.MaxLength = 4;
             TxtCodigoU.Name = "TxtCodigoU";
-            TxtCodigoU.Size = new Size(110, 23);
+            TxtCodigoU.Size = new Size(125, 27);
             TxtCodigoU.TabIndex = 24;
             // 
             // GrdItensU
@@ -77,14 +76,12 @@
             GrdItensU.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             GrdItensU.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GrdItensU.Columns.AddRange(new DataGridViewColumn[] { CodigoU, NomeU, SenhaU, EmailU, TipoU, BtnAlterarU, BtnExcluirU });
-            GrdItensU.Location = new Point(3, 164);
-            GrdItensU.Margin = new Padding(3, 2, 3, 2);
+            GrdItensU.Location = new Point(3, 219);
             GrdItensU.Name = "GrdItensU";
             GrdItensU.RowHeadersWidth = 51;
-            GrdItensU.Size = new Size(816, 196);
+            GrdItensU.Size = new Size(932, 261);
             GrdItensU.TabIndex = 23;
             GrdItensU.CellClick += GrdItensU_CellClick;
-            GrdItensU.CellContentClick += GrdItensU_CellContentClick;
             // 
             // CodigoU
             // 
@@ -144,20 +141,19 @@
             // 
             // BtnFecharU
             // 
-            BtnFecharU.Location = new Point(674, 60);
-            BtnFecharU.Margin = new Padding(3, 2, 3, 2);
+            BtnFecharU.Location = new Point(770, 80);
             BtnFecharU.Name = "BtnFecharU";
-            BtnFecharU.Size = new Size(136, 26);
+            BtnFecharU.Size = new Size(156, 34);
             BtnFecharU.TabIndex = 22;
             BtnFecharU.Text = "&Fechar";
             BtnFecharU.UseVisualStyleBackColor = true;
+            BtnFecharU.Click += BtnFecharU_Click;
             // 
             // BtnSalvarU
             // 
-            BtnSalvarU.Location = new Point(674, 17);
-            BtnSalvarU.Margin = new Padding(3, 2, 3, 2);
+            BtnSalvarU.Location = new Point(770, 23);
             BtnSalvarU.Name = "BtnSalvarU";
-            BtnSalvarU.Size = new Size(136, 26);
+            BtnSalvarU.Size = new Size(156, 34);
             BtnSalvarU.TabIndex = 21;
             BtnSalvarU.Text = "&Salvar";
             BtnSalvarU.UseVisualStyleBackColor = true;
@@ -166,80 +162,76 @@
             // CboTipo
             // 
             CboTipo.FormattingEnabled = true;
-            CboTipo.Location = new Point(32, 112);
-            CboTipo.Margin = new Padding(3, 2, 3, 2);
+            CboTipo.Location = new Point(36, 150);
             CboTipo.Name = "CboTipo";
-            CboTipo.Size = new Size(110, 23);
+            CboTipo.Size = new Size(125, 28);
             CboTipo.TabIndex = 28;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 88);
+            label1.Location = new Point(36, 117);
             label1.Name = "label1";
-            label1.Size = new Size(30, 15);
+            label1.Size = new Size(39, 20);
             label1.TabIndex = 29;
             label1.Text = "Tipo";
             // 
             // LblNomeI
             // 
             LblNomeI.AutoSize = true;
-            LblNomeI.Location = new Point(155, 17);
+            LblNomeI.Location = new Point(177, 23);
             LblNomeI.Name = "LblNomeI";
-            LblNomeI.Size = new Size(40, 15);
+            LblNomeI.Size = new Size(50, 20);
             LblNomeI.TabIndex = 27;
             LblNomeI.Text = "Nome";
             // 
             // TxtNomeU
             // 
-            TxtNomeU.Location = new Point(155, 44);
-            TxtNomeU.Margin = new Padding(3, 2, 3, 2);
+            TxtNomeU.Location = new Point(177, 59);
             TxtNomeU.MaxLength = 100;
             TxtNomeU.Name = "TxtNomeU";
-            TxtNomeU.Size = new Size(496, 23);
+            TxtNomeU.Size = new Size(566, 27);
             TxtNomeU.TabIndex = 25;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(155, 86);
+            label2.Location = new Point(177, 115);
             label2.Name = "label2";
-            label2.Size = new Size(36, 15);
+            label2.Size = new Size(46, 20);
             label2.TabIndex = 31;
             label2.Text = "Email";
             // 
             // TxtEmail
             // 
-            TxtEmail.Location = new Point(155, 113);
-            TxtEmail.Margin = new Padding(3, 2, 3, 2);
+            TxtEmail.Location = new Point(177, 151);
             TxtEmail.MaxLength = 100;
             TxtEmail.Name = "TxtEmail";
-            TxtEmail.Size = new Size(266, 23);
+            TxtEmail.Size = new Size(304, 27);
             TxtEmail.TabIndex = 30;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(451, 86);
+            label3.Location = new Point(515, 115);
             label3.Name = "label3";
-            label3.Size = new Size(39, 15);
+            label3.Size = new Size(49, 20);
             label3.TabIndex = 33;
             label3.Text = "Senha";
             // 
             // TxtSenha
             // 
-            TxtSenha.Location = new Point(451, 113);
-            TxtSenha.Margin = new Padding(3, 2, 3, 2);
+            TxtSenha.Location = new Point(515, 151);
             TxtSenha.MaxLength = 100;
             TxtSenha.Name = "TxtSenha";
-            TxtSenha.Size = new Size(200, 23);
+            TxtSenha.Size = new Size(228, 27);
             TxtSenha.TabIndex = 32;
             // 
             // FrmUsuario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(821, 377);
+            ClientSize = new Size(938, 503);
             Controls.Add(label3);
             Controls.Add(TxtSenha);
             Controls.Add(label2);
@@ -253,7 +245,6 @@
             Controls.Add(GrdItensU);
             Controls.Add(BtnFecharU);
             Controls.Add(BtnSalvarU);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmUsuario";
             Text = "FrmUsuario";
             Activated += FrmUsuario_Activated;

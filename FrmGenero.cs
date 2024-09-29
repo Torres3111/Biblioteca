@@ -1,4 +1,5 @@
 ﻿using AulaAEDB01.Windows.Model;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -174,9 +175,21 @@ namespace AulaAEDB01.Windows
                     //Clicou no botão excluir.
                     if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        objSelecionado.Excluir();
-                        CarregaGrid();
+                        try
+                        {
+                            objSelecionado.Excluir();
+                            CarregaGrid();
+                        }
+                        catch (SqlException ex)
+                        {
+
+                            MessageBox.Show($"Não é possível excluir o Gênero porque ele já tem um livro cadastrado. ", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+
                     }
+
                 }
             }
         }

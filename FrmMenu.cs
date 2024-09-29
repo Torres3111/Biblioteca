@@ -17,16 +17,16 @@ namespace AulaAEDB01.Windows
         {
             InitializeComponent();
             Permissoes();
-            
-            
+
+
         }
         private void Permissoes()
         {
             if (Usuario.UsuarioLogado != null && Usuario.UsuarioLogado.TipoL != "ADM")
             {
-                        
-                    MnuUsuario.Enabled = false;
-                
+
+                MnuUsuario.Enabled = false;
+
             }
         }
         private void FrmMenu_Load(object sender, EventArgs e)
@@ -127,11 +127,12 @@ namespace AulaAEDB01.Windows
         private void Checar()
         {
 
-           
+
         }
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+            
         }
     }
 
