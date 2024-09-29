@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v.2\\AulaAEDB01.Windows.csproj": {}
+    "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v3\\AulaAEDB01.Windows.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v.2\\AulaAEDB01.Windows.csproj": {
+    "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v3\\AulaAEDB01.Windows.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v.2\\AulaAEDB01.Windows.csproj",
+        "projectUniqueName": "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v3\\AulaAEDB01.Windows.csproj",
         "projectName": "AulaAEDB01.Windows",
-        "projectPath": "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v.2\\AulaAEDB01.Windows.csproj",
+        "projectPath": "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v3\\AulaAEDB01.Windows.csproj",
         "packagesPath": "C:\\Users\\Torres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Torres\\Source\\Repos\\SistemaDeBiblioteca_v.2\\obj\\",
+        "outputPath": "C:\\Users\\Torres\\Source\\Repos\\SistemaDeBiblioteca_v3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

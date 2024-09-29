@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AulaAEDB01.Windows
-build_property.ProjectDir = C:\Users\Torres\source\repos\SistemaDeBiblioteca_v.2\
+build_property.ProjectDir = C:\Users\Torres\source\repos\SistemaDeBiblioteca_v3\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

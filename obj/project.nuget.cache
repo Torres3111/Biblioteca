@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PmkPc2atc2Q=",
+  "dgSpecHash": "82pAfUUdF3c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v.2\\AulaAEDB01.Windows.csproj",
+  "projectFilePath": "C:\\Users\\Torres\\source\\repos\\SistemaDeBiblioteca_v3\\AulaAEDB01.Windows.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Torres\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Torres\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
